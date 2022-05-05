@@ -24,6 +24,10 @@
     </p>
 
     <form action="play.jsp">
+    	石の総数：<input type="number" name="stoneTotal" min="1" value=""><br>
+     	1度に取れる石の数：<input type="number" name="stoneCount" min="1" value=""><br>
+      	プレイヤーの数：<input type="number" name="playerCount" min="2" max="26" value=""><br>
+      	石の記号：<input type="text" name="stoneSymbol" value=""><br>
       <button class="btn" type="submit">始める</button>
     </form>
   </div>

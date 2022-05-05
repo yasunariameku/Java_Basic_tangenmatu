@@ -20,20 +20,19 @@ public class Utility {
      * @return
      */
     // todo:ここにgetStoneDisplayHtmlメソッドを定義
-    public static String  getStoneDisplayHTML(int totalNum) {
-    	
-    	String stone = "";
-    	
-    	for (int i= 1; i <= totalNum; i++) {
-    		stone += "●" ;
-    		
-    		if (i % 10 == 0 ) {
-    			stone += "<br>";
-    		}
-    	}
-    		
-    	
-    	return stone;
-    }
+	public static String getStoneDisplayHTML(int totalNum) {
+
+		String stone = "";
+
+		for (int i = 1; i <= totalNum; i++) {
+			stone += "●";
+
+			if (i % 10 == 0) {
+				stone += "<br>";
+			}
+		}
+
+		return stone;
+	}
 
 }

@@ -1,11 +1,26 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
   pageEncoding="UTF-8"%>
 <%
-    String winner = "";
-    // セッションからプレイヤー名を取得する
-    winner = (String) session.getAttribute("player");
-     
-    
+// セッションからプレイヤー名を取得する
+	//char winner = (char) session.getAttribute("player");
+
+	String playerCountFin = (String) session.getAttribute("playerCountStr");
+	//out.println(playerCountFin);
+	int playerCountInt = Integer.parseInt(playerCountFin);
+	
+	char winLoseAlf = 'a';
+	String winLose = "";
+
+	if (playerCountInt > 2) {
+		winLoseAlf = (char) session.getAttribute("player");
+		winLose = "敗者：";
+	
+	}else {
+		winLoseAlf = (char) session.getAttribute("player");
+		winLose = "勝者：";
+		
+	}
+	
 %>
 <!DOCTYPE html>
 <html>
@@ -18,7 +33,7 @@
   <h1>石取りゲーム</h1>
   <div class="info">
     <h2>
-      勝者：プレイヤー<%= winner %> ！！
+      <%= winLose %>プレイヤー<%= winLoseAlf %> ！！
     </h2>
     <form action="index.jsp">
       <button class="btn" type="submit">先頭に戻る</button>
