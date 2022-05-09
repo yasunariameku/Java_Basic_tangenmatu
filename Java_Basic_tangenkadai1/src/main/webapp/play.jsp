@@ -68,7 +68,7 @@
     }
     
     //表示する石の数を関数に入れてtotalNum分表示させる。
-    String htmlStone = Utility.getStoneDisplayHTML(totalNum);
+    String htmlStone = Utility.getStoneDisplayHTML(totalNum,stoneSymbolStr);
     
     
     //32行目でsessionに保存したプレイヤーの数を数値型に変換する
